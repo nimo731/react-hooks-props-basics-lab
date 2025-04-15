@@ -1,14 +1,12 @@
 import React from "react";
 import Links from "./Links";
 
-function About({ bio, github, linkedin }) {
+function About({ bio, links }) {
   return (
-    <div >
+    <div id="about">
       <h2>About Me</h2>
-      <p>(bio)</p>
-      <img src="https://via.placeholder.com/150" alt="Developer illustration" />
-      <h3>Links</h3>
-      <Links github={github} linkedin={linkedin} />
+      {bio && <p>{bio}</p>}
+      <Links github={links.github} linkedin={links.linkedin} />
     </div>
   );
 }
